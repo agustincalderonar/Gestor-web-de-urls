@@ -1,0 +1,23 @@
+<div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="selectedCategoria === 'Todas'" aria-current="true" (click)="mostrarTodas()" id="navTodas">Todas</a>
+      </li>
+      <app-categorias *ngFor="let categoria of listaCategorias" [categoria]="categoria" [selectedCategoria]="selectedCategoria" (categoriaFiltro)="filtrarUrl($event)">
+      </app-categorias>
+    </ul>
+  </div>
+  <div class="card-body">
+    <ul class="list-group">
+      <app-url
+        class="list-group-item"
+        *ngFor="let url of listaUrls"
+        [url]="url"
+        (urlFavorita)="favoritaUrl($event)"
+        (urlEliminada)="eliminarUrl($event)">
+      </app-url>
+    </ul>
+  </div>
+</div>
+  

@@ -1,0 +1,32 @@
+
+<form [formGroup]="formularioAnadir" (ngSubmit)="anadirUrl(link, nombre, deportesCategoria, cocinaCategoria, juegosCategoria)">
+    <div class="input-group m-4 container">
+        <div class="col col-8 justify-content-center">
+            <input type="text" class="form-control row row-6" placeholder="Introduce el link" formControlName="link" [class.is-invalid]="linkNoValido" id="link" #link>
+            <small *ngIf="linkNoValido" class="text-danger">Debe ser una url valida</small>
+
+            <input type="text" class="form-control row row-6" placeholder="Introduce un nombre" formControlName="nombre" [class.is-invalid]="nombreNoValido" id="nombre" #nombre>
+            <small *ngIf="nombreNoValido" class="text-danger">Mínimo 3 caracteres</small>
+        </div>
+
+        <div class="col col-3 justify-content-end">
+          <div class="row row-2">
+            <input class="col-2" type="checkbox" id="deportesCategoria" #deportesCategoria>
+            <label class="col-10" for="deportesCategoria"> Deportes</label>
+          </div>
+
+          <div class="row row-2">
+            <input class="col-2" type="checkbox" id="cocinaCategoria" #cocinaCategoria>
+            <label class="col-10" for="cocinaCategoria"> Cocina</label>
+          </div>
+
+          <div class="row row-2">
+            <input class="col-2" type="checkbox" id="juegosCategoria" #juegosCategoria>
+            <label class="col-10" for="juegosCategoria"> Juegos</label>
+          </div>
+          
+        </div>
+      <button type="submit" class="input-group-text col-1" id="basic-addon2">Añadir</button>
+    </div>
+</form>
+

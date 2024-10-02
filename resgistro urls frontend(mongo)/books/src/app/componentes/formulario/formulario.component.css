@@ -1,0 +1,11 @@
+.col{
+    padding: 0.4em;
+}
+.row{
+    margin: 0.5em;
+}
+button{
+    background-color: rgb(251, 209, 69);
+    display: flex;
+    justify-content: center;
+}

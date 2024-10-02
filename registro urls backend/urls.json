@@ -1,0 +1,3 @@
+[{"nombre": "Blog cocina", "link": "https://claudiaandjulia.com/blogs/general", "categorias": ["Cocina"], "favorita": true},
+{"nombre": "Solitario", "link": "https://solitariospider.es/", "categorias": ["Juegos"], "favorita": false},
+{"nombre": "Periodico marca", "link": "https://www.marca.com/", "categorias": ["Deporte"], "favorita": false}]
